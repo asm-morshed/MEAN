@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+
+</head>
+
+
+
+<body ng-app="myApp">
+
+<body  ng-app="myApp">
+
+<div ng-controller="myController">
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+    </div>
+    <ul class="nav navbar-nav">
+      
+      <li><a href="./index.html">Entry Info</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+<!--- Employee information input page -->
+<div >
+<div class="spam col-sm-20">
+
+<form class="form-horizontal" role="form">
+  
+
+  <div class="form-group">
+    
+    <h1 class="control-label col-sm-5">Entry Information</h1>
+  </div>	<br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="name">Name:</label>
+    <div class="col-sm-4">
+      <input type="name" class="form-control" id="name" placeholder="Enter name" required="" ng-model="anEmployee.name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Address:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="address" placeholder="Enter address" required="" ng-model="anEmployee.address">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Mobile No:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" required="" ng-model="anEmployee.phone">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" id="email" placeholder="Enter email" required="" ng-model="anEmployee.email">
+    </div>
+  </div>
+
+  
+  
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-default" ng-click="addEmployeeInfo()">Submit</button>
+      <button type="submit" class="btn btn-primary" ng-click="editEmployeeInfo(anEmployee._id)">Update</button>
+    </div>
+  </div>
+</form>
+</div>
+<div class="container">
+   <div class="form-group">
+    
+    <h1 class="control-label col-sm-5">Employee Information</h1>
+  </div> <br/>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in employeeList">
+        <td>{{p.name}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.phone}}</td>
+        <td><button type="submit" class="btn btn-warning" ng-click="edit(p._id)">Edit</button></td>
+        <td><button type="submit" class="btn btn-danger" ng-click=delete(p._id)>Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script type="text/javascript" src="angular/controller.js"></script>
+
+</body>
+
+</div>
+</body>
+</html>
